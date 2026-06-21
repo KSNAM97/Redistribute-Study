@@ -1,3 +1,9 @@
+![Topic](https://img.shields.io/badge/Topic-Route_Redistribution-blue)
+![Protocol](https://img.shields.io/badge/Protocol-OSPF%20%7C%20EIGRP%20%7C%20RIP-orange)
+![Vendor](https://img.shields.io/badge/Vendor-Cisco-1BA0D7?logo=cisco&logoColor=white)
+![Tool](https://img.shields.io/badge/Tool-GNS3-2ECC71)
+![Level](https://img.shields.io/badge/Level-Advanced-red)
+
 # Redistribute-Study
 
 > Cisco 라우터 환경에서 **Redistribute(재분배)** 를 학습하기 위한 실습 정리 저장소입니다.
