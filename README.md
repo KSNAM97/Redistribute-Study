@@ -17,7 +17,7 @@
 
 ## 📑 Topology
 
-![Redistribute_Topology](./topology/Redistribute_Topologypng)
+![Redistribute_Topology](./topology/Redistribute_Topology.png)
 
 
 | 구간 | Protocol | 비고 |
