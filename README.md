@@ -5,15 +5,7 @@
 
 ---
 
-## 📌 Topics
 
-`cisco` `networking` `ccnp` `ccie` `routing` `ospf` `ripv2` `eigrp` `redistribution` `route-map` `prefix-list` `frame-relay`
-
-## 🏷️ Tags
-
-`Redistribute` `OSPF` `RIPv2` `EIGRP` `Route-Map` `Prefix-List` `Filtering` `Frame-Relay` `IGP`
-
----
 
 ## 📑 Topology
 
