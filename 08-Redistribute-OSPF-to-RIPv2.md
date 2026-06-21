@@ -1,0 +1,46 @@
+# 08. OSPF → RIPv2 Redistribute
+
+> 서로 다른 Routing Protocol 간 재분배 시 두 가지 Protocol이 enable 된 Router에서 설정
+
+---
+
+## EX) OSPF → RIPv2
+
+### 📋 요구사항
+
+- R4에서 OSPF로부터 재분배된 모든 네트워크 정보의 Metric = **3** 으로 확인
+
+### 🔧 R1
+
+```bash
+router rip
+ redistribute ospf 1 metric 3
+```
+
+### ✅ 확인
+
+```bash
+R4# show ip route rip
+     4.0.0.0/24 is subnetted, 1 subnets
+R    4.1.1.0      [120/3] via 150.1.13.1, ...
+     128.28.0.0/24 is subnetted, 1 subnets
+R    128.28.2.0   [120/3] via 150.1.13.1, ...
+     128.128.0.0/24 is subnetted, 1 subnets
+R    128.128.1.0  [120/3] via 150.1.13.1, ...
+R    198.2.3.0/24 [120/3] via 150.1.13.1, ...
+     13.0.0.0/24 is subnetted, 12 subnets
+R    13.13.1.0    [120/1] via 150.1.13.1, ...
+R    13.13.2.0    [120/3] via 150.1.13.1, ...
+R    13.13.3.0    [120/3] via 150.1.13.1, ...
+R    13.13.5.0    [120/3] via 150.1.13.1, ...
+R    13.13.9.0    [120/1] via 150.1.13.1, ...
+R    13.13.10.0   [120/1] via 150.1.13.1, ...
+R    13.13.11.0   [120/1] via 150.1.13.1, ...
+R    13.13.12.0   [120/3] via 150.1.13.1, ...
+R    13.13.13.0   [120/3] via 150.1.13.1, ...
+     150.3.0.0/24 is subnetted, 1 subnets
+R    150.3.13.0   [120/3] via 150.1.13.1, ...
+```
+
+> ⚠️ Connected는 RIPv2로 재분배 시 자동으로 Metric 1로 보일 수 있음
+> (Offset-list로 조정 가능 — [12장](./12-Filter-OSPF-to-RIPv2.md) 참고)
